@@ -1,42 +1,57 @@
-import React, { useEffect } from "react";
+import React from "react";
 import SimpleParallax from "simple-parallax-js";
-import "./Content.css";
+/*import "./Content.css";*/
 
 const MyContent = () => {
-  useEffect(() => {
-    // Initialize the parallax effect on all images with the class 'parallax-image'
-    const images = document.querySelectorAll(".parallax-image");
-    new SimpleParallax(images, {
-      scale: 1.6, // Scale the image on scroll
-      delay: 0.1, // Delay for smooth effect
-      transition: "cubic-bezier(0,0,0,1)", // Transition effect
-    });
-  }, []);
-
-  const imageSources = [
-    "./picture/Banner.jpg", // Example image URLs
-    "./picture/bgmepine.png",
-    "./picture/r.png",
-    "./picture/r2.png",
-    "./picture/r3.png",
-    "./picture/r4.png",
-    "./picture/TARN.jpg",
-    "./picture/TARN2.jpg",
-    "./picture/TARN3.jpg",
-    "./picture/TARN4.jpg",
+  const images = [
+    "image.png",
+    "image.png",
+    "image.png",
+    "image.png",
+    "image.png",
   ];
 
   return (
-    <div className="content-container">
-      {imageSources.map((src, index) => (
-        <div key={index} className="image-container">
-          <img
-            className="parallax-image"
-            src={src}
-            alt={`Image ${index + 1}`}
-          />
-        </div>
-      ))}
+    <div
+      style={{
+        maxWidth: "100vw",
+      }}
+    >
+      <h1>Test</h1>
+
+      <div
+        style={{
+          maxWidth: "100%",
+          display: "grid",
+          gridTemplateColumns: "repeat(5, 1fr)",
+          gridGap: "10px",
+        }}
+      >
+        {Array.from(Array(50).keys()).map((line) => (
+          <React.Fragment key={line}>
+            {images.map((src, index) => (
+              <SimpleParallax
+                key={`${line}-${index}`}
+                delay={0.2}
+                transition="cubic-bezier(0,0,0,1)"
+                orientation="up"
+                scale={1.5}
+                //overflow={true}
+                //maxTransition={50}
+              >
+                <img
+                  src={src}
+                  alt={`image-${line}-${index}`}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                  }}
+                />
+              </SimpleParallax>
+            ))}
+          </React.Fragment>
+        ))}
+      </div>
     </div>
   );
 };
