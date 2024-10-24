@@ -12,6 +12,7 @@
   background-color: #993333;
   padding: 1rem 2rem;
   color: #fff;
+  position: sticky;
 }
 
 .navbar-logo {

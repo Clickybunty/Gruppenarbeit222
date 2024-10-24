@@ -23,7 +23,7 @@ function MyContent() {
         <ParallaxLayer
           offset={0}
           speed={1}
-          factor={2}
+          factor={4}
           style={{
             backgroundImage: `url(${moon})`,
             backgroundSize: "cover",
@@ -33,7 +33,7 @@ function MyContent() {
         <ParallaxLayer
           offset={2}
           speed={1}
-          factor={3}
+          factor={4}
           style={{
             backgroundImage: `url(${land})`,
             backgroundSize: "cover",
@@ -41,7 +41,7 @@ function MyContent() {
         ></ParallaxLayer>
 
         <ParallaxLayer
-          sticky={{ start: 0.5, end: 4.5 }}
+          sticky={{ start: 0.5, end: 3.5 }}
           style={{ textAlign: "center" }}
         >
           <img src={cat} alt="Kadse" />
@@ -56,7 +56,7 @@ function MyContent() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={3}
+          offset={3.6}
           speed={2}
           onClick={() => ref.current.scrollTo(0)}
         >
