@@ -10,7 +10,7 @@ function App() {
     <>
       <Navbar />
       <Mycontent />
-      <Footer />
+      <Footer title1="Marcel" title2="Merlin" title3="Julian" title4="Juri" />
     </>
   );
 }

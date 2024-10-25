@@ -1,20 +1,20 @@
 import "./Footer.css";
 
-function Footer() {
+function Footer({ title1, title2, title3, title4 }) {
   return (
     <div className="footer-bar">
       <ul className={`footer-links`}>
         <li>
-          <a href="#impressum">Impressum</a>
+          <a href="#impressum">{title1}</a>
         </li>
         <li>
-          <a href="#about">About Us</a>
+          <a href="#about">{title2}</a>
         </li>
         <li>
-          <a href="#services">Services</a>
+          <a href="#services">{title3}</a>
         </li>
         <li>
-          <a href="#contact">Crack Contacts</a>
+          <a href="#contact">{title4}</a>
         </li>
       </ul>
     </div>
