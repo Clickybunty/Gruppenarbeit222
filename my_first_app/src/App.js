@@ -8,7 +8,7 @@ import Footer from "./components/layout/footer/Footer";
 function App() {
   return (
     <>
-      <Navbar />
+      <Navbar htitle1="Brian" htitle2="Stevan" htitle3="Iman" htitle4="Crack" />
       <Mycontent />
       <Footer title1="Marcel" title2="Merlin" title3="Julian" title4="Juri" />
     </>

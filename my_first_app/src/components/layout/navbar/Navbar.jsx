@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ htitle1, htitle2, htitle3, htitle4 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -17,16 +17,16 @@ const Navbar = () => {
       </div>
       <ul className={`navbar-links ${isMobileMenuOpen ? "active" : ""}`}>
         <li>
-          <a href="#home">Home</a>
+          <a href="#home">{htitle1}</a>
         </li>
         <li>
-          <a href="#about">About</a>
+          <a href="#about">{htitle2}</a>
         </li>
         <li>
-          <a href="#services">Services</a>
+          <a href="#services">{htitle3}</a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#contact">{htitle4}</a>
         </li>
       </ul>
       <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
